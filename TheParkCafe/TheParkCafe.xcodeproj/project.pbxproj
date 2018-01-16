@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75297AFF1FDCB6A700A620D1 /* DailySpeacialsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75297AFE1FDCB6A700A620D1 /* DailySpeacialsView.xib */; };
+		75297B031FDCB7C200A620D1 /* DailySpecialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75297B021FDCB7C200A620D1 /* DailySpecialsView.swift */; };
 		752E34F31FCE1C4C009A051C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752E34F21FCE1C4C009A051C /* AppDelegate.swift */; };
 		752E34F81FCE1C4C009A051C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752E34F61FCE1C4C009A051C /* Main.storyboard */; };
 		752E34FA1FCE1C4C009A051C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752E34F91FCE1C4C009A051C /* Assets.xcassets */; };
 		752E34FD1FCE1C4C009A051C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752E34FB1FCE1C4C009A051C /* LaunchScreen.storyboard */; };
 		752E35051FCE1CB0009A051C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 752E35041FCE1CB0009A051C /* GoogleService-Info.plist */; };
+		7572780E200D0D1B00671FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572780D200D0D1B00671FA4 /* HomeViewController.swift */; };
 		831F589BF256D2DD5E6C283E /* Pods_TheParkCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60E8D1C38D6115567A0678B2 /* Pods-TheParkCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.debug.xcconfig"; sourceTree = "<group>"; };
+		75297AFE1FDCB6A700A620D1 /* DailySpeacialsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailySpeacialsView.xib; sourceTree = "<group>"; };
+		75297B021FDCB7C200A620D1 /* DailySpecialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecialsView.swift; sourceTree = "<group>"; };
 		752E34EF1FCE1C4C009A051C /* TheParkCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheParkCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		752E34F21FCE1C4C009A051C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		752E34F71FCE1C4C009A051C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		752E34FC1FCE1C4C009A051C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		752E34FE1FCE1C4C009A051C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752E35041FCE1CB0009A051C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7572780D200D0D1B00671FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheParkCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32E965A823CCFEFC43149AB /* Pods-TheParkCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,9 @@
 			children = (
 				752E34F21FCE1C4C009A051C /* AppDelegate.swift */,
 				752E34F61FCE1C4C009A051C /* Main.storyboard */,
+				7572780D200D0D1B00671FA4 /* HomeViewController.swift */,
+				75297AFE1FDCB6A700A620D1 /* DailySpeacialsView.xib */,
+				75297B021FDCB7C200A620D1 /* DailySpecialsView.swift */,
 				752E34F91FCE1C4C009A051C /* Assets.xcassets */,
 				752E34FB1FCE1C4C009A051C /* LaunchScreen.storyboard */,
 				752E34FE1FCE1C4C009A051C /* Info.plist */,
@@ -152,6 +161,7 @@
 			files = (
 				752E34FD1FCE1C4C009A051C /* LaunchScreen.storyboard in Resources */,
 				752E35051FCE1CB0009A051C /* GoogleService-Info.plist in Resources */,
+				75297AFF1FDCB6A700A620D1 /* DailySpeacialsView.xib in Resources */,
 				752E34FA1FCE1C4C009A051C /* Assets.xcassets in Resources */,
 				752E34F81FCE1C4C009A051C /* Main.storyboard in Resources */,
 			);
@@ -220,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75297B031FDCB7C200A620D1 /* DailySpecialsView.swift in Sources */,
 				752E34F31FCE1C4C009A051C /* AppDelegate.swift in Sources */,
+				7572780E200D0D1B00671FA4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
