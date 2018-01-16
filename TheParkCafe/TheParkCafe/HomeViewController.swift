@@ -12,9 +12,9 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var dailySpecialsScrollView: UIScrollView!
     
-    let mondaySpecial = ["title":"Don Jose Burrito","image":"1","description":"THis burrito is so good!" ]
-    let tuesdaySpecial = ["title":"Tuesday thing", "image":"1","description":"Tuesday is so great"]
-    let wednesdaySpecial = ["title":"Wednesday thing","image":"1","description":"say what wednessday!"]
+    let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
+    let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
+    let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
     
     var daysArray = [Dictionary<String,String>]()
     

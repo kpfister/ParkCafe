@@ -14,6 +14,8 @@ class DailySpecialsView: UIView {
     
     @IBOutlet weak var dailySpecialsDescriptionLabel: UILabel!
     
+    @IBOutlet weak var dailySpecialsTitleLabel: UILabel!
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
