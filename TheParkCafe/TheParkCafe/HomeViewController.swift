@@ -8,9 +8,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var dailySpecialsScrollView: UIScrollView!
+    @IBOutlet weak var dailySpecialsPageControl: UIPageControl!
     
     let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
     let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
@@ -28,7 +29,7 @@ class HomeViewController: UIViewController {
         dailySpecialsScrollView.isPagingEnabled = true
         dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 250)
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
-        
+        dailySpecialsScrollView.delegate = self
         loadSpecials()
         
         /// Mock data to test
@@ -49,6 +50,11 @@ class HomeViewController: UIViewController {
             
             }
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let page = scrollView.contentOffset.x / scrollView.frame.size.width
+        dailySpecialsPageControl.currentPage = Int(page)
     }
     
 //    if let dailySpecialsView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
