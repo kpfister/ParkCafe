@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UIScrollViewDelegate {
+class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var dailySpecialsScrollView: UIScrollView!
     @IBOutlet weak var dailySpecialsPageControl: UIPageControl!
@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
     
     var daysArray = [Dictionary<String,String>]()
+    var menuItemsArray: [MenuItems] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         daysArray = [mondaySpecial,tuesdaySpecial,wednesdaySpecial]
         
         dailySpecialsScrollView.isPagingEnabled = true
-        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 250)
+        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 200)
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
@@ -41,8 +42,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         for (index, day) in daysArray.enumerated() {
             if let dailySpecialView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
                 
-                dailySpecialView.dailySpecialsImageView.image = UIImage(named: day["image"]!)
-                dailySpecialView.dailySpecialsDescriptionLabel.text = day["description"]
+                //dailySpecialView.dailySpecialsImageView.image = UIImage(named: day["image"]!)
+                //dailySpecialView.dailySpecialsDescriptionLabel.text = day["description"]
                 
                 dailySpecialsScrollView.addSubview(dailySpecialView)
                 dailySpecialView.frame.size.width = self.view.bounds.size.width
@@ -71,6 +72,17 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK:- Tableview Datasources
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 3
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 
 }

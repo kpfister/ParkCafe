@@ -14,6 +14,7 @@
 		752E34FA1FCE1C4C009A051C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 752E34F91FCE1C4C009A051C /* Assets.xcassets */; };
 		752E34FD1FCE1C4C009A051C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 752E34FB1FCE1C4C009A051C /* LaunchScreen.storyboard */; };
 		752E35051FCE1CB0009A051C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 752E35041FCE1CB0009A051C /* GoogleService-Info.plist */; };
+		755164E72014051C0093DF28 /* ApplicationMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755164E62014051C0093DF28 /* ApplicationMenuItems.swift */; };
 		7572780E200D0D1B00671FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572780D200D0D1B00671FA4 /* HomeViewController.swift */; };
 		831F589BF256D2DD5E6C283E /* Pods_TheParkCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		752E34FC1FCE1C4C009A051C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		752E34FE1FCE1C4C009A051C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752E35041FCE1CB0009A051C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		755164E62014051C0093DF28 /* ApplicationMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenuItems.swift; sourceTree = "<group>"; };
 		7572780D200D0D1B00671FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheParkCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32E965A823CCFEFC43149AB /* Pods-TheParkCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				752E34F21FCE1C4C009A051C /* AppDelegate.swift */,
 				752E34F61FCE1C4C009A051C /* Main.storyboard */,
+				755164E62014051C0093DF28 /* ApplicationMenuItems.swift */,
 				7572780D200D0D1B00671FA4 /* HomeViewController.swift */,
 				75297AFE1FDCB6A700A620D1 /* DailySpeacialsView.xib */,
 				75297B021FDCB7C200A620D1 /* DailySpecialsView.swift */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755164E72014051C0093DF28 /* ApplicationMenuItems.swift in Sources */,
 				75297B031FDCB7C200A620D1 /* DailySpecialsView.swift in Sources */,
 				752E34F31FCE1C4C009A051C /* AppDelegate.swift in Sources */,
 				7572780E200D0D1B00671FA4 /* HomeViewController.swift in Sources */,
