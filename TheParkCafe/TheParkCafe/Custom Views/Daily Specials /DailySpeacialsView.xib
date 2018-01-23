@@ -41,6 +41,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="dailySpecialsDescriptionLabel" destination="HBd-my-nVF" id="E9v-qT-Dtg"/>
                 <outlet property="dailySpecialsTitleLabel" destination="Xcm-v5-vgC" id="PJh-67-cfr"/>
             </connections>
             <point key="canvasLocation" x="130.5" y="214"/>

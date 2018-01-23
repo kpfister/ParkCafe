@@ -10,13 +10,9 @@ import UIKit
 
 class DailySpecialsView: UIView {
 
-    @IBOutlet weak var dailySpecialsImageView: UIImageView!
-    
-    //@IBOutlet weak var dailySpecialsDescriptionLabel: UILabel!
-    
+    //@IBOutlet weak var dailySpecialsImageView: UIImageView!
     @IBOutlet weak var dailySpecialsTitleLabel: UILabel!
-    
-    
+    @IBOutlet weak var dailySpecialsDescriptionLabel: UILabel!
     
     /*
     // Only override draw() if you perform custom drawing.
@@ -25,5 +21,4 @@ class DailySpecialsView: UIView {
         // Drawing code
     }
     */
-
 }
