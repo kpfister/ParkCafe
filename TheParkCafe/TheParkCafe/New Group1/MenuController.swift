@@ -44,6 +44,7 @@ struct MenuController {
     
     static let otherBreakfast = [frenchToastFoolishness,pancakeSandwich,frenchToast,pancakes,specalityPancakes,oatmeal,shootersSandwich,buscuitsAndGravy,boulderGranola]
     
+    static let appMenu = ["Omelets", "Breakfast Specials", "Other Breakfast", "Short Orders","Soups + Salads","Hamburgers + Sandwiches","Beverages","Sides","Store Info"]
     
 
 }

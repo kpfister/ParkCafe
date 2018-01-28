@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Mark: - Outlets
     @IBOutlet weak var dailySpecialsScrollView: UIScrollView!
     @IBOutlet weak var dailySpecialsPageControl: UIPageControl!
+    @IBOutlet weak var mainMenuTableView: UITableView!
     
     
     // MockData for testing
@@ -30,7 +31,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         /// Mock data to test
         daysArray = [mondaySpecial,tuesdaySpecial,wednesdaySpecial]
         dailySpecialsScrollView.isPagingEnabled = true
-        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 200)
+        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 180)
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
@@ -51,27 +52,53 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         }
     }
     
-    /*
-     // TODO: - Create the detail view and seque to it.
-     
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+      //TODO: - Create the detail view and seque to it.
+     /*
+     if segue.identifier == "toDetailView" {
+     if let entryDetailViewController = segue.destination as? EntryDetailViewController {
+     if let entryCell = sender as? UITableViewCell {
+     if let indexPath = tableView.indexPath(for: entryCell) {
+     let entry = EntryController.sharedInstance.entries[indexPath.row]
+     entryDetailViewController.entry = entry
+     }
+     }
+     }
+     }
+     */
+     //MARK: - Navigation
+     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailPage" {
+            if let detailVC = segue.destination as? DetailsTableViewController {
+                if let menuItemCell = sender as? UITableViewCell {
+                    if let indexPath = mainMenuTableView.indexPath(for: menuItemCell) {
+                        //let entry = EntryController.sharedInstance.entries[indexPath.row]
+                        //detailVC.name = menuItemsArray[indexPath.row].name
+                    }
+                }
+            }
+        }
+        print("There may have been a error )")
     }
-    */
+ 
     
     // MARK: - Tableview Datasources
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MenuController.breakfastSpecials.count
+        return MenuController.appMenu.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") else { return UITableViewCell() }
-        let meal = MenuController.breakfastSpecials[indexPath.row]
-        cell.textLabel?.text = meal.name
+        let item = MenuController.appMenu[indexPath.row]
+        cell.textLabel?.text = item
+
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        print(row)
     }
     // Mark : - Scroll View methods
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
