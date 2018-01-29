@@ -54,18 +54,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     
       //TODO: - Create the detail view and seque to it.
-     /*
-     if segue.identifier == "toDetailView" {
-     if let entryDetailViewController = segue.destination as? EntryDetailViewController {
-     if let entryCell = sender as? UITableViewCell {
-     if let indexPath = tableView.indexPath(for: entryCell) {
-     let entry = EntryController.sharedInstance.entries[indexPath.row]
-     entryDetailViewController.entry = entry
-     }
-     }
-     }
-     }
-     */
      //MARK: - Navigation
      //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,13 +61,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
             if let detailVC = segue.destination as? DetailsTableViewController {
                 if let menuItemCell = sender as? UITableViewCell {
                     if let indexPath = mainMenuTableView.indexPath(for: menuItemCell) {
-                        //let entry = EntryController.sharedInstance.entries[indexPath.row]
-                        //detailVC.name = menuItemsArray[indexPath.row].name
+                        detailVC.menuItem = MenuController.appMenu[indexPath.row]
                     }
                 }
             }
         }
-        print("There may have been a error )")
     }
  
     
@@ -90,15 +76,16 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") else { return UITableViewCell() }
-        let item = MenuController.appMenu[indexPath.row]
-        cell.textLabel?.text = item
+
+        let sectionName = MenuController.appMenuFormattedNames[indexPath.row]
+        cell.textLabel?.text = sectionName
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        print(row)
+        print(" The row pressed was \(row)")
     }
     // Mark : - Scroll View methods
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
