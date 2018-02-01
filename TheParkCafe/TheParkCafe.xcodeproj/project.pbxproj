@@ -17,6 +17,7 @@
 		755164E72014051C0093DF28 /* ApplicationMenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755164E62014051C0093DF28 /* ApplicationMenuItems.swift */; };
 		75633F1A201D0DA300960D00 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75633F19201D0DA300960D00 /* DetailsTableViewController.swift */; };
 		7572780E200D0D1B00671FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572780D200D0D1B00671FA4 /* HomeViewController.swift */; };
+		758ABB722023986B001EB645 /* customDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758ABB712023986B001EB645 /* customDetailCell.swift */; };
 		75BDBA0D2017C08E000882D0 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDBA0C2017C08E000882D0 /* MenuController.swift */; };
 		831F589BF256D2DD5E6C283E /* Pods_TheParkCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		755164E62014051C0093DF28 /* ApplicationMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenuItems.swift; sourceTree = "<group>"; };
 		75633F19201D0DA300960D00 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailsTableViewController.swift; path = Views/ViewControllers/DetailsTableViewController.swift; sourceTree = "<group>"; };
 		7572780D200D0D1B00671FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		758ABB712023986B001EB645 /* customDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customDetailCell.swift; path = "Custom Views/customDetailCell.swift"; sourceTree = "<group>"; };
 		75BDBA0C2017C08E000882D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheParkCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32E965A823CCFEFC43149AB /* Pods-TheParkCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				752E34F21FCE1C4C009A051C /* AppDelegate.swift */,
 				752E34F61FCE1C4C009A051C /* Main.storyboard */,
 				75633F19201D0DA300960D00 /* DetailsTableViewController.swift */,
+				758ABB712023986B001EB645 /* customDetailCell.swift */,
 				75BDBA0B2017C06A000882D0 /* Model */,
 				75BDBA112017C418000882D0 /* View Controllers */,
 				75BDBA0E2017C11F000882D0 /* Controllers */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758ABB722023986B001EB645 /* customDetailCell.swift in Sources */,
 				75BDBA0D2017C08E000882D0 /* MenuController.swift in Sources */,
 				755164E72014051C0093DF28 /* ApplicationMenuItems.swift in Sources */,
 				75297B031FDCB7C200A620D1 /* DailySpecialsView.swift in Sources */,

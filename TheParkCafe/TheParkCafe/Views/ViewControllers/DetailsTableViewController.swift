@@ -10,40 +10,53 @@ import UIKit
 
 class DetailsTableViewController: UITableViewController {
 
+   
+    
+    
     var menuItem: [MenuItems]?
+    var selectedIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return menuItem!.count
     }
-
     
+     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(selectedIndex == indexPath.row) {
+            return 100
+        } else {
+            return 40
+        }
+    }
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell") as? customDetailCell else {return UITableViewCell()}
        
         let item = menuItem![indexPath.row]
-        cell.textLabel?.text = item.name
+        cell.mealNameLabel.text = item.name
+        cell.mealPriceLabel.text = item.price
+        cell.mealDetailsLabel.text = item.description
+        
         print(item)
         return cell
     }
-   
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (selectedIndex == indexPath.row) {
+            selectedIndex = -1
+        } else {
+            selectedIndex = indexPath.row
+        }
+        self.tableView.beginUpdates()
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.tableView.endUpdates()
     }
-   
+
 }
