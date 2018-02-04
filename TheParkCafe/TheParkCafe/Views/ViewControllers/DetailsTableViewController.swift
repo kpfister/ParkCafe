@@ -18,6 +18,8 @@ class DetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 40
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     
@@ -30,7 +32,7 @@ class DetailsTableViewController: UITableViewController {
     
      override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(selectedIndex == indexPath.row) {
-            return 100
+            return UITableViewAutomaticDimension
         } else {
             return 40
         }
