@@ -27,7 +27,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setUpNavBar()
         
+        
+//        navigationItem.title = NSAttributedString(string: "The Park Cafe", attributes: <#T##[NSAttributedStringKey : Any]?#>)
         /// Mock data to test
         daysArray = [mondaySpecial,tuesdaySpecial,wednesdaySpecial]
         dailySpecialsScrollView.isPagingEnabled = true
@@ -35,6 +38,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
+    }
+    
+    func setUpNavBar() {
+        let logo = UIImage(named: "ParkCafeLogo")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFill
+        self.navigationItem.titleView = imageView
     }
     
     func loadSpecials() {
@@ -62,6 +72,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
                 if let menuItemCell = sender as? UITableViewCell {
                     if let indexPath = mainMenuTableView.indexPath(for: menuItemCell) {
                         detailVC.menuItem = MenuController.appMenu[indexPath.row]
+                        detailVC.navigationItem.title = MenuController.appMenuFormattedNames[indexPath.row]
                     }
                 }
             }
@@ -75,10 +86,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") as? AppMenuTableViewCell else { return UITableViewCell() }
 
         let sectionName = MenuController.appMenuFormattedNames[indexPath.row]
-        cell.textLabel?.text = sectionName
+        cell.appMenuCellLabel.text = sectionName
 
         return cell
     }
