@@ -148,9 +148,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="cbC-Ow-NOw">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COG-Kn-n81">
+                                    <rect key="frame" x="8" y="8" width="359" height="64"/>
+                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="COG-Kn-n81" firstAttribute="top" secondItem="cbC-Ow-NOw" secondAttribute="top" constant="8" id="6dt-3z-IG1"/>
+                                <constraint firstAttribute="trailing" secondItem="COG-Kn-n81" secondAttribute="trailing" constant="8" id="Mq6-YP-vCS"/>
+                                <constraint firstItem="COG-Kn-n81" firstAttribute="leading" secondItem="cbC-Ow-NOw" secondAttribute="leading" constant="8" id="ZqE-WB-Qec"/>
+                                <constraint firstAttribute="bottom" secondItem="COG-Kn-n81" secondAttribute="bottom" constant="8" id="ecK-dp-Zc9"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="100" id="Uwg-Xd-5fr" customClass="customDetailCell" customModule="TheParkCafe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uwg-Xd-5fr" id="Oan-m7-Aez">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -231,6 +250,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="q7B-HQ-ArF"/>
+                    <connections>
+                        <outlet property="headerView" destination="cbC-Ow-NOw" id="AbA-hY-lnE"/>
+                        <outlet property="overviewLabel" destination="COG-Kn-n81" id="EA2-BQ-7Ec"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyt-kN-6UB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

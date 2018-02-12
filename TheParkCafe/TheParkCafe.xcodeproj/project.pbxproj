@@ -27,7 +27,7 @@
 		60E8D1C38D6115567A0678B2 /* Pods-TheParkCafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.debug.xcconfig"; sourceTree = "<group>"; };
 		75297AFE1FDCB6A700A620D1 /* DailySpeacialsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailySpeacialsView.xib; sourceTree = "<group>"; };
 		75297B021FDCB7C200A620D1 /* DailySpecialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecialsView.swift; sourceTree = "<group>"; };
-		752E34EF1FCE1C4C009A051C /* TheParkCafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheParkCafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		752E34EF1FCE1C4C009A051C /* The Park Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Park Cafe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		752E34F21FCE1C4C009A051C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		752E34F71FCE1C4C009A051C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		752E34F91FCE1C4C009A051C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		752E34F01FCE1C4C009A051C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				752E34EF1FCE1C4C009A051C /* TheParkCafe.app */,
+				752E34EF1FCE1C4C009A051C /* The Park Cafe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		752E34EE1FCE1C4C009A051C /* TheParkCafe */ = {
+		752E34EE1FCE1C4C009A051C /* The Park Cafe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 752E35011FCE1C4C009A051C /* Build configuration list for PBXNativeTarget "TheParkCafe" */;
+			buildConfigurationList = 752E35011FCE1C4C009A051C /* Build configuration list for PBXNativeTarget "The Park Cafe" */;
 			buildPhases = (
 				5379AAEC24C1505768A4975A /* [CP] Check Pods Manifest.lock */,
 				752E34EB1FCE1C4C009A051C /* Sources */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = TheParkCafe;
+			name = "The Park Cafe";
 			productName = TheParkCafe;
-			productReference = 752E34EF1FCE1C4C009A051C /* TheParkCafe.app */;
+			productReference = 752E34EF1FCE1C4C009A051C /* The Park Cafe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				752E34EE1FCE1C4C009A051C /* TheParkCafe */,
+				752E34EE1FCE1C4C009A051C /* The Park Cafe */,
 			);
 		};
 /* End PBXProject section */
@@ -439,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Wolf-s-Head-Labs.TheParkCafe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Wolf-s-Head-Labs.TheParkCafe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -471,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		752E35011FCE1C4C009A051C /* Build configuration list for PBXNativeTarget "TheParkCafe" */ = {
+		752E35011FCE1C4C009A051C /* Build configuration list for PBXNativeTarget "The Park Cafe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				752E35021FCE1C4C009A051C /* Debug */,

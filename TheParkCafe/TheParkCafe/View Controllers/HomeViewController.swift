@@ -27,24 +27,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setUpNavBar()
-        
-        
-//        navigationItem.title = NSAttributedString(string: "The Park Cafe", attributes: <#T##[NSAttributedStringKey : Any]?#>)
-        /// Mock data to test
+
         daysArray = [mondaySpecial,tuesdaySpecial,wednesdaySpecial]
         dailySpecialsScrollView.isPagingEnabled = true
         dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 180)
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
-    }
-    
-    func setUpNavBar() {
-        let logo = UIImage(named: "ParkCafeLogo")
-        let imageView = UIImageView(image: logo)
-        imageView.contentMode = .scaleAspectFill
-        self.navigationItem.titleView = imageView
     }
     
     func loadSpecials() {
