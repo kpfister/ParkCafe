@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // MockData for testing
     let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
     let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
-    let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
+    //let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
     
     var daysArray = [Dictionary<String,String>]()
     var menuItemsArray: [MenuItems] = []
@@ -27,13 +27,27 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let image = UIImage(named: "ParkCafeLogo")
+//        navigationItem.titleView = UIImageView(image: image)
+        
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        let backgroundImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
+        backgroundImageView.frame = self.view.frame
+        backgroundImageView.contentMode = .scaleAspectFit
+        blurView.frame = backgroundImageView.bounds
+        backgroundImageView.addSubview(blurView)
+        //backgroundImageView.alpha = 0.9
+       mainMenuTableView.backgroundView = backgroundImageView
+        
 
-        daysArray = [mondaySpecial,tuesdaySpecial,wednesdaySpecial]
+        daysArray = [mondaySpecial,tuesdaySpecial]
         dailySpecialsScrollView.isPagingEnabled = true
         dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 180)
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
+        designNavBar()
     }
     
     func loadSpecials() {
@@ -49,6 +63,14 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
             
             }
         }
+    }
+    
+    func designNavBar() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "ParkCafeLogo")
+        imageView.image = image
+        navigationItem.titleView = imageView
     }
     
     

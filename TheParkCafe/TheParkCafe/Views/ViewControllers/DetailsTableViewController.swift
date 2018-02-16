@@ -20,12 +20,19 @@ class DetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let tempImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        let backgroundImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
+        backgroundImageView.frame = self.tableView.frame
+        backgroundImageView.contentMode = .scaleAspectFit
+        blurView.frame = backgroundImageView.bounds
+        backgroundImageView.addSubview(blurView)
+        backgroundImageView.alpha = 0.9
+        self.tableView.backgroundView = backgroundImageView
         self.view.insetsLayoutMarginsFromSafeArea = true
-        tableView.estimatedRowHeight = 40
+        tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.translatesAutoresizingMaskIntoConstraints = false
-
-       
     }
     
     
@@ -40,7 +47,7 @@ class DetailsTableViewController: UITableViewController {
         if(selectedIndex == indexPath.row) {
             return UITableViewAutomaticDimension
         } else {
-            return 40
+            return 60
         }
     }
 
@@ -65,16 +72,6 @@ class DetailsTableViewController: UITableViewController {
         self.tableView.beginUpdates()
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
         self.tableView.endUpdates()
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 80))
-        let detailsLabel = UILabel()
-        headerView.addSubview(detailsLabel)
-        detailsLabel.text = "Served with Park Potatoes and Toast. Substitute Toast or Park Potatoes for: A cup of Fruit - $1.50,Sliced Tomato, Cottage Cheese or Yogurt - $1.00Substitute Avocado for $1.75"
-        headerView.backgroundColor = .red
-        
-        return headerView
     }
 
 }

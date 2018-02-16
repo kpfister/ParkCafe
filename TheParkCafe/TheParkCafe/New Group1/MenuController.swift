@@ -96,7 +96,7 @@ struct MenuController {
     
     
     // App menu and formatted strings
-    static let appMenu = [breakfastStuffs,moreBreakfastStuffs,omelets,sweetsAndStuffs, hamburgersAndSandiwches,soupsAndSalads,shortOrders,drinks]
+    static let appMenu = [omelets,breakfastStuffs,moreBreakfastStuffs,sweetsAndStuffs, hamburgersAndSandiwches,soupsAndSalads,shortOrders,drinks]
     static let appMenuFormattedNames = ["Omelets","Breakfast Stuffs","More Breakfast Stuffs","Sweets and Stuffs","Hamburgers and Sandwiches","Soups and Salads","Short Orders and Sides","Drinks","Store Info"]
     
     
