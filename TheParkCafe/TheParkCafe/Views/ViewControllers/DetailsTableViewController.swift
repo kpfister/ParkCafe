@@ -20,7 +20,13 @@ class DetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let tempImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
+        designTableViewBackground()
+        self.view.insetsLayoutMarginsFromSafeArea = true
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    func designTableViewBackground() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         let backgroundImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
@@ -30,9 +36,6 @@ class DetailsTableViewController: UITableViewController {
         backgroundImageView.addSubview(blurView)
         backgroundImageView.alpha = 0.9
         self.tableView.backgroundView = backgroundImageView
-        self.view.insetsLayoutMarginsFromSafeArea = true
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     

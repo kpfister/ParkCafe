@@ -24,8 +24,8 @@ struct MenuController {
     
     // Breakfast Stuffs
     static let theSingle = MenuItems(price: "$5.50", description: "Two eggs cooked any style", name: "The Single", photo: nil)
-    static let doublePlay = MenuItems(price: "7.50", description: "Two eggs and your choise of Ham, Bacon, or Sausage", name: "Double Play", photo: nil)
-    static let fieldGoal = MenuItems(price: "7.00", description: "Two eggs scrambeled with diced Ham", name: "Field Goal", photo: nil)
+    static let doublePlay = MenuItems(price: "$7.50", description: "Two eggs and your choise of Ham, Bacon, or Sausage", name: "Double Play", photo: nil)
+    static let fieldGoal = MenuItems(price: "$7.00", description: "Two eggs scrambeled with diced Ham", name: "Field Goal", photo: nil)
     static let basesLoaded = MenuItems(price: "$11.00", description: "Breakfast Steak or Pork Chops served with Two eggs", name: "Bases Loaded", photo: nil)
     
     static let breakfastStuffs = [theSingle,doublePlay,fieldGoal,basesLoaded]
@@ -50,11 +50,11 @@ struct MenuController {
     static let sweetsAndStuffs = [frenchToast,pancakes,oats,granolaAndYogurt]
     
     // Hamburgers and Sandwiches
-    static let superBurger = MenuItems(price: "6.00", description: "1/2 Pound Ground Sirloin patty, served with Lettice, Tomato, Onion, and Pickles on the side. add Cheese($.50), add Cheese and Bacon($1.75)", name: "Super Burger", photo: nil)
+    static let superBurger = MenuItems(price: "$6.00", description: "1/2 Pound Ground Sirloin patty, served with Lettice, Tomato, Onion, and Pickles on the side. add Cheese($.50), add Cheese and Bacon($1.75)", name: "Super Burger", photo: nil)
     static let oliversBleu = MenuItems(price: "$7.75", description: "1/2 Pound Ground Sirloin patty smothered with Bleu Cheese Dressing and topped with Bacon", name: "Oliver's Bleu Cheese Burger", photo: nil)
-    static let miggysBurger = MenuItems(price: "8.00", description: "1/2 Pound Ground Sirloin patty smothered with Pork Chile Verde and topped with Shredded Cheese", name: "Miggy's Chile Verde Cheeseburger", photo: nil)
+    static let miggysBurger = MenuItems(price: "$8.00", description: "1/2 Pound Ground Sirloin patty smothered with Pork Chile Verde and topped with Shredded Cheese", name: "Miggy's Chile Verde Cheeseburger", photo: nil)
     static let blt = MenuItems(price: "$6.00", description: "Bacon, Lettuce, Tomatoes and Mayo, on your choice of bread. add Turkey ($1.50)", name: "BLT", photo: nil)
-    static let deliSandwich = MenuItems(price: "6.00", description: "Your choice of Ham,Turkey, or Tuna on your choice of bread. With Cheddar Cheese, Lettuce, Tomatoes, and Mayo - Please specify if you would like your bread toasted", name: "Deli Sandwich", photo: nil)
+    static let deliSandwich = MenuItems(price: "$6.00", description: "Your choice of Ham,Turkey, or Tuna on your choice of bread. With Cheddar Cheese, Lettuce, Tomatoes, and Mayo - Please specify if you would like your bread toasted", name: "Deli Sandwich", photo: nil)
     static let club = MenuItems(price: "$7.75", description: "Ham, Turkey, Bacon, Tomato, Lettuce and Mayo on your choice of Toasted Bread. add Cheese($0.50)", name: "Club Sandwich", photo: nil)
     static let pattyMelt = MenuItems(price: "$7.00", description: "1/2 Pound Ground Sirloin patty, Grilled Onions, and melted Swiss Cheese on Grilled Rye Bread. add Grilled Mushrooms($0.50)", name: "Patty Melt", photo: nil)
     static let tunaMelt = MenuItems(price: "$7.00", description: "Grilled Tuna Salad, topped with Melted Provolone. Served on a Hoagie Roll", name: "Tuna Melt", photo: nil)

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     @IBOutlet weak var dailySpecialsScrollView: UIScrollView!
     @IBOutlet weak var dailySpecialsPageControl: UIPageControl!
     @IBOutlet weak var mainMenuTableView: UITableView!
+    @IBOutlet weak var dailySpecialsTitleLabel: UILabel!
     
     
     // MockData for testing
@@ -52,6 +53,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     func loadSpecials() {
         for (index, day) in daysArray.enumerated() {
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEEE"
+            let day = formatter.string(from: date)
+            print(day)
+            let mealType = "Breakfast"
             if let dailySpecialView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
                 
                 //dailySpecialView.dailySpecialsImageView.image = UIImage(named: day["image"]!)
@@ -62,6 +70,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
                 dailySpecialView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
             
             }
+            //dailySpecialsTitleLabel.text = "\(day)'s \(mealType) special"
         }
     }
     
