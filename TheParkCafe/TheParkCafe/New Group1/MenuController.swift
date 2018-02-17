@@ -33,7 +33,7 @@ struct MenuController {
     // More Breakfast Stuffs
     static let gustavosBurrito = MenuItems(price: "$8.00", description: "Two Eggs scrambled with Tomato, Onions, and Green Peppers. Smothered with our Park Chile Verde and Queso Fresco. Served with Park Potatoes", name: "Gustavo's Burrito", photo: nil)
     static let michiganHash = MenuItems(price: "$8.00", description: "Sausage, Onions, Green Peppers, and Grilled Mushrooms with Park Potatoes topped with Two Eggs and Cheddar Cheese", name: "Michigan Hash", photo: nil)
-    static let frenchToastFoolishness = MenuItems(price: "$9.00", description: "Two slices of French Toast, Two eggs, Two pieces of Bacon and Park Potatoes", name: "FTF (French Toast Foolishness)", photo: nil)
+    static let frenchToastFoolishness = MenuItems(price: "$9.00", description: "Two slices of French Toast, Two eggs, Two pieces of Bacon and Park Potatoes", name: "French Toast Foolishness", photo: nil)
     static let pancakeSandwich = MenuItems(price: "$8.50", description: "Two Eggs and a sice of Bacon, Sausage, or Ham served between two plaste sized Pancakes. (Breakfast meats and eggs can be served on the side for the less adventurous)", name: "Pancake Sandwich", photo: nil)
     static let shootersSandwich = MenuItems(price: "$8.00", description: "Ham, Bacon, or Sausage, Cheddar Cheese and Two Eggs cooked any style on a Grilled Sandwich. Served with Park Potatoes", name: "Shooters Sandwich", photo: nil)
     static let buscuitsAndGravy = MenuItems(price: "$7.95", description: "Two Buttermilk Biscuits smothered wtih Sausage Gravy. Served with Two Eggs, Two Sausage links and Park Potatoes", name: "B's and G's", photo: nil)
@@ -74,7 +74,7 @@ struct MenuController {
     
     // Short Orders
     static let theMeats = MenuItems(price: "$3.50", description: "Ham, Bacon, or Sausage side of your favorite breakfast meats", name: "Ham, Bacon, or Sausage", photo: nil)
-    static let anSingleEgg = MenuItems(price: "$1.25", description: "Can I offer you an egg in this trying time?", name: "One Egg", photo: nil)
+    static let anSingleEgg = MenuItems(price: "$1.25", description: "Can I offer you an nice egg in this trying time?", name: "One Egg", photo: nil)
     static let parkPotatoes = MenuItems(price: "$3.00 - $4.00", description: "Grilled Potatoes and Onion. add Cheese ($0.50)", name: "Park Potatoes", photo: nil)
     static let toast = MenuItems(price: "$2.00", description: "Side of Toast or (2) Biscuits", name: "Toast or Biscuits", photo: nil)
     static let cottageCheese = MenuItems(price: "$1.50", description: "Cup of Cottage Cheese or Vanilla Yogurt", name: "Cottage Cheese or Vanilla Yogurt", photo: nil)

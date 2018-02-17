@@ -42,7 +42,6 @@ class DetailsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return menuItem!.count
     }
     
@@ -61,8 +60,7 @@ class DetailsTableViewController: UITableViewController {
         cell.mealNameLabel.text = item.name
         cell.mealPriceLabel.text = item.price
         cell.mealDetailsLabel.text = item.description
-        
-        print(item)
+      
         return cell
     }
     

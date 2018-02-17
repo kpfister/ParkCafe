@@ -37,10 +37,10 @@
 		752E34FE1FCE1C4C009A051C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		752E35041FCE1CB0009A051C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		755164E62014051C0093DF28 /* ApplicationMenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenuItems.swift; sourceTree = "<group>"; };
-		75633F19201D0DA300960D00 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailsTableViewController.swift; path = Views/ViewControllers/DetailsTableViewController.swift; sourceTree = "<group>"; };
+		75633F19201D0DA300960D00 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		7572780D200D0D1B00671FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		758ABB712023986B001EB645 /* customDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customDetailCell.swift; path = "Custom Views/customDetailCell.swift"; sourceTree = "<group>"; };
-		758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppMenuTableViewCell.swift; path = "Custom Views/AppMenuTableViewCell.swift"; sourceTree = "<group>"; };
+		758ABB712023986B001EB645 /* customDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customDetailCell.swift; sourceTree = "<group>"; };
+		758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuTableViewCell.swift; sourceTree = "<group>"; };
 		75BDBA0C2017C08E000882D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		75DF7F582038ADD5007CF58C /* DailySpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecials.swift; sourceTree = "<group>"; };
 		75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecialsController.swift; sourceTree = "<group>"; };
@@ -83,9 +83,6 @@
 			children = (
 				752E34F21FCE1C4C009A051C /* AppDelegate.swift */,
 				752E34F61FCE1C4C009A051C /* Main.storyboard */,
-				75633F19201D0DA300960D00 /* DetailsTableViewController.swift */,
-				758ABB712023986B001EB645 /* customDetailCell.swift */,
-				758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */,
 				75BDBA0B2017C06A000882D0 /* Model */,
 				75BDBA112017C418000882D0 /* View Controllers */,
 				75BDBA0E2017C11F000882D0 /* Controllers */,
@@ -102,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				755164E62014051C0093DF28 /* ApplicationMenuItems.swift */,
+				75DF7F582038ADD5007CF58C /* DailySpecials.swift */,
 			);
 			name = Model;
 			path = "New Group";
@@ -111,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				75BDBA0C2017C08E000882D0 /* MenuController.swift */,
+				75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */,
 			);
 			name = Controllers;
 			path = "New Group1";
@@ -119,6 +118,7 @@
 		75BDBA0F2017C12E000882D0 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				75DF7F5C2038C77F007CF58C /* Custom Cells */,
 				75BDBA102017C149000882D0 /* Daily Specials  */,
 			);
 			path = "Custom Views";
@@ -137,10 +137,18 @@
 			isa = PBXGroup;
 			children = (
 				7572780D200D0D1B00671FA4 /* HomeViewController.swift */,
-				75DF7F582038ADD5007CF58C /* DailySpecials.swift */,
-				75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */,
+				75633F19201D0DA300960D00 /* DetailsTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		75DF7F5C2038C77F007CF58C /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */,
+				758ABB712023986B001EB645 /* customDetailCell.swift */,
+			);
+			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
 		7649316905257F9654753C6C /* Pods */ = {

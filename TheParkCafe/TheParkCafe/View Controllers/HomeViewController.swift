@@ -121,8 +121,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        print(" The row pressed was \(row)")
     }
+    
     // Mark : - Scroll View methods
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
