@@ -18,12 +18,14 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     
     
     // MockData for testing
-    let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
-    let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
+//    let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
+//    let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
     //let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
     
-    var daysArray = [Dictionary<String,String>]()
+    //var daysArray = [Dictionary<String,String>]()
     var menuItemsArray: [MenuItems] = []
+    var dailySpecialsArray: [DailySpecials] = []
+    var dayTitle: String = ""
     
     // Mark: - Lifecycle
     override func viewDidLoad() {
@@ -41,10 +43,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         //backgroundImageView.alpha = 0.9
        mainMenuTableView.backgroundView = backgroundImageView
         
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        let dayz = formatter.string(from: date)
+        dayTitle = dayz
+        dailySpecialsArray = DailySpecialsController.special(day: "Monday")
+        
 
-        daysArray = [mondaySpecial,tuesdaySpecial]
+        //daysArray = [mondaySpecial,tuesdaySpecial]
         dailySpecialsScrollView.isPagingEnabled = true
-        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(daysArray.count), height: 180)
+        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(dailySpecialsArray.count), height: 180)
+        dailySpecialsPageControl.numberOfPages = dailySpecialsArray.count
         dailySpecialsScrollView.showsHorizontalScrollIndicator = false
         dailySpecialsScrollView.delegate = self
         loadSpecials()
@@ -52,28 +62,37 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     }
     
     func loadSpecials() {
-        for (index, day) in daysArray.enumerated() {
+//        let date = Date()
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "EEEE"
+//        let dayz = formatter.string(from: date)
+//       let dayArray = DailySpecialsController.special(day: dayz)
+        
+    
+        for (index, day) in dailySpecialsArray.enumerated() {
             
-            let date = Date()
-            let formatter = DateFormatter()
-            formatter.dateFormat = "EEEE"
-            let day = formatter.string(from: date)
-            print(day)
-            let mealType = "Breakfast"
             if let dailySpecialView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
-                
+                //let idk = day
                 //dailySpecialView.dailySpecialsImageView.image = UIImage(named: day["image"]!)
                 //dailySpecialView.dailySpecialsDescriptionLabel.text = day["description"]
-                dailySpecialView.dailySpecialsDescriptionLabel.text? = MenuController.doublePlay.description!
-                dailySpecialsScrollView.addSubview(dailySpecialView)
-                dailySpecialView.frame.size.width = self.view.bounds.size.width
+                
+                dailySpecialView.dailySpecialsDescriptionLabel.text? = day.description!
+                dailySpecialView.dailySpecialsTitleLabel.text? = day.name
+                
+                dailySpecialView.frame = dailySpecialsScrollView.frame
                 dailySpecialView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
+                dailySpecialsScrollView.addSubview(dailySpecialView)
             
             }
-            //dailySpecialsTitleLabel.text = "\(day)'s \(mealType) special"
+            dailySpecialsTitleLabel.text = "\(dayTitle)'s Specials"
         }
     }
-    
+    /*
+     (lldb) po DailySpecialsManager.special(day: day)
+     ▿ 2 elements
+     - .0 : "Eggs Benedict"
+     - .1 : "BFB (Big Fucking Burrito"
+     */
     func designNavBar() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         imageView.contentMode = .scaleAspectFit

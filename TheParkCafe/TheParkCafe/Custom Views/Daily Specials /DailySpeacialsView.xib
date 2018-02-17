@@ -15,37 +15,33 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailySpecialsViewController" customModule="TheParkCafe" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailySpecialsViewController" customModule="The_Park_Cafe" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DailySpecialsView" customModule="TheParkCafe" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DailySpecialsView" customModule="The_Park_Cafe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FB6-GZ-H1m">
-                    <rect key="frame" x="0.0" y="8" width="375" height="172"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don Jose Burrito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-v5-vgC">
-                            <rect key="frame" x="0.0" y="0.0" width="151.5" height="25"/>
-                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-my-nVF">
-                            <rect key="frame" x="0.0" y="41" width="375" height="131"/>
-                            <string key="text">Two poached eggs served on top of grilled ham and tomato on a toasted English muffin. Topped with home-made Hollandaise sauce and served with Park Potatoes.</string>
-                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Don Jose Burrito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-v5-vgC">
+                    <rect key="frame" x="8" y="8" width="152" height="18"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                    <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-my-nVF">
+                    <rect key="frame" x="8" y="34" width="359" height="125"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                    <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="FB6-GZ-H1m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="6Rl-P0-aCP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FB6-GZ-H1m" secondAttribute="bottom" id="8mH-TD-lAb"/>
-                <constraint firstAttribute="trailing" secondItem="FB6-GZ-H1m" secondAttribute="trailing" id="EZU-Sg-lO9"/>
-                <constraint firstItem="FB6-GZ-H1m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="m28-t1-V8V"/>
+                <constraint firstItem="HBd-my-nVF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="XyM-mB-tZk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HBd-my-nVF" secondAttribute="trailing" constant="8" id="e3y-lW-UfF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HBd-my-nVF" secondAttribute="bottom" constant="8" id="eQb-ar-kVj"/>
+                <constraint firstItem="HBd-my-nVF" firstAttribute="top" secondItem="Xcm-v5-vgC" secondAttribute="bottom" constant="8" id="evf-Qw-1W6"/>
+                <constraint firstItem="Xcm-v5-vgC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lcg-Fo-PCG"/>
+                <constraint firstItem="Xcm-v5-vgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="lk7-eA-nwC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

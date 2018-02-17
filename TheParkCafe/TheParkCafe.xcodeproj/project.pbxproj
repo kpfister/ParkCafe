@@ -20,6 +20,8 @@
 		758ABB722023986B001EB645 /* customDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758ABB712023986B001EB645 /* customDetailCell.swift */; };
 		758BBDFE2028C571001A103E /* AppMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */; };
 		75BDBA0D2017C08E000882D0 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BDBA0C2017C08E000882D0 /* MenuController.swift */; };
+		75DF7F592038ADD5007CF58C /* DailySpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF7F582038ADD5007CF58C /* DailySpecials.swift */; };
+		75DF7F5B2038B5BE007CF58C /* DailySpecialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */; };
 		831F589BF256D2DD5E6C283E /* Pods_TheParkCafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		758ABB712023986B001EB645 /* customDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customDetailCell.swift; path = "Custom Views/customDetailCell.swift"; sourceTree = "<group>"; };
 		758BBDFD2028C571001A103E /* AppMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppMenuTableViewCell.swift; path = "Custom Views/AppMenuTableViewCell.swift"; sourceTree = "<group>"; };
 		75BDBA0C2017C08E000882D0 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		75DF7F582038ADD5007CF58C /* DailySpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecials.swift; sourceTree = "<group>"; };
+		75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySpecialsController.swift; sourceTree = "<group>"; };
 		93EEAB4FA5A2266009BE9FD5 /* Pods_TheParkCafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheParkCafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32E965A823CCFEFC43149AB /* Pods-TheParkCafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheParkCafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheParkCafe/Pods-TheParkCafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				7572780D200D0D1B00671FA4 /* HomeViewController.swift */,
+				75DF7F582038ADD5007CF58C /* DailySpecials.swift */,
+				75DF7F5A2038B5BE007CF58C /* DailySpecialsController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 				758ABB722023986B001EB645 /* customDetailCell.swift in Sources */,
 				75BDBA0D2017C08E000882D0 /* MenuController.swift in Sources */,
 				755164E72014051C0093DF28 /* ApplicationMenuItems.swift in Sources */,
+				75DF7F5B2038B5BE007CF58C /* DailySpecialsController.swift in Sources */,
 				75297B031FDCB7C200A620D1 /* DailySpecialsView.swift in Sources */,
+				75DF7F592038ADD5007CF58C /* DailySpecials.swift in Sources */,
 				752E34F31FCE1C4C009A051C /* AppDelegate.swift in Sources */,
 				75633F1A201D0DA300960D00 /* DetailsTableViewController.swift in Sources */,
 				758BBDFE2028C571001A103E /* AppMenuTableViewCell.swift in Sources */,
