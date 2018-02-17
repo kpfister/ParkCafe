@@ -94,6 +94,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
                     if let indexPath = mainMenuTableView.indexPath(for: menuItemCell) {
                         detailVC.menuItem = MenuController.appMenu[indexPath.row]
                         detailVC.navigationItem.title = MenuController.appMenuFormattedNames[indexPath.row]
+                        detailVC.overView = MenuController.appMenuInformation[indexPath.row]
                     }
                 }
             }
@@ -110,6 +111,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") as? AppMenuTableViewCell else { return UITableViewCell() }
 
         let sectionName = MenuController.appMenuFormattedNames[indexPath.row]
+        let idk = MenuController.appMenuInformation[indexPath.row]
         cell.appMenuCellLabel.text = sectionName
 
         return cell

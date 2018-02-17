@@ -147,14 +147,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="n5b-Fy-v4w">
+                        <view key="tableHeaderView" hidden="YES" contentMode="scaleToFill" id="n5b-Fy-v4w">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-ci-ISK">
-                                    <rect key="frame" x="8" y="8" width="359" height="43"/>
-                                    <string key="text">Served with Park Potatoes and Toast. Substitute toast or potatoes for a cup of seasonal fruit $1.50, sliced tomato, cottage cheese or yogurt $1.00. Add Avocado for $1.75
-</string>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="idk " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="xtx-ci-ISK">
+                                    <rect key="frame" x="8" y="0.0" width="359" height="123"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -162,8 +160,8 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="xtx-ci-ISK" firstAttribute="top" secondItem="n5b-Fy-v4w" secondAttribute="top" constant="8" id="0MG-LY-3Zw"/>
-                                <constraint firstAttribute="bottom" secondItem="xtx-ci-ISK" secondAttribute="bottom" constant="8" id="2Ig-Mz-QFm"/>
+                                <constraint firstItem="xtx-ci-ISK" firstAttribute="top" secondItem="n5b-Fy-v4w" secondAttribute="top" id="0MG-LY-3Zw"/>
+                                <constraint firstAttribute="bottom" secondItem="xtx-ci-ISK" secondAttribute="bottom" id="2Ig-Mz-QFm"/>
                                 <constraint firstItem="xtx-ci-ISK" firstAttribute="leading" secondItem="n5b-Fy-v4w" secondAttribute="leading" constant="8" id="TLB-D6-Ong"/>
                                 <constraint firstAttribute="trailing" secondItem="xtx-ci-ISK" secondAttribute="trailing" constant="8" id="nY9-sJ-78v"/>
                             </constraints>
@@ -245,6 +243,10 @@
                     <navigationItem key="navigationItem" id="KRM-K8-Fig">
                         <barButtonItem key="backBarButtonItem" title="Text" id="6uz-iT-r4R"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="headerView" destination="n5b-Fy-v4w" id="shW-lQ-Wjr"/>
+                        <outlet property="overviewLabel" destination="xtx-ci-ISK" id="5T8-Rc-U1m"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyt-kN-6UB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
