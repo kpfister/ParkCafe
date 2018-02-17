@@ -111,7 +111,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "appMenuCell") as? AppMenuTableViewCell else { return UITableViewCell() }
 
         let sectionName = MenuController.appMenuFormattedNames[indexPath.row]
-        let idk = MenuController.appMenuInformation[indexPath.row]
+        
         cell.appMenuCellLabel.text = sectionName
 
         return cell
