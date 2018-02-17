@@ -21,27 +21,36 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Don Jose Burrito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-v5-vgC">
-                    <rect key="frame" x="8" y="8" width="152" height="18"/>
-                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-v5-vgC">
+                    <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-my-nVF">
-                    <rect key="frame" x="8" y="34" width="359" height="125"/>
-                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRz-it-Yae">
+                    <rect key="frame" x="8" y="7" width="0.0" height="1"/>
+                    <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="bVl-r8-4iR"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-my-nVF">
+                    <rect key="frame" x="8" y="16" width="359" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="HBd-my-nVF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="XyM-mB-tZk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HBd-my-nVF" secondAttribute="trailing" constant="8" id="e3y-lW-UfF"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HBd-my-nVF" secondAttribute="bottom" constant="8" id="eQb-ar-kVj"/>
-                <constraint firstItem="HBd-my-nVF" firstAttribute="top" secondItem="Xcm-v5-vgC" secondAttribute="bottom" constant="8" id="evf-Qw-1W6"/>
-                <constraint firstItem="Xcm-v5-vgC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="lcg-Fo-PCG"/>
-                <constraint firstItem="Xcm-v5-vgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="lk7-eA-nwC"/>
+                <constraint firstAttribute="trailing" secondItem="HBd-my-nVF" secondAttribute="trailing" constant="8" id="4L7-fg-O2L"/>
+                <constraint firstItem="Xcm-v5-vgC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="DcZ-rz-tO4"/>
+                <constraint firstItem="xRz-it-Yae" firstAttribute="leading" secondItem="Xcm-v5-vgC" secondAttribute="leading" id="LX1-5k-3Ce"/>
+                <constraint firstItem="HBd-my-nVF" firstAttribute="top" secondItem="xRz-it-Yae" secondAttribute="bottom" constant="8" id="Mr7-Kb-D1y"/>
+                <constraint firstItem="HBd-my-nVF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="ZIG-EA-Vpy"/>
+                <constraint firstItem="Xcm-v5-vgC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="exO-Tl-vof"/>
+                <constraint firstItem="xRz-it-Yae" firstAttribute="width" secondItem="Xcm-v5-vgC" secondAttribute="width" id="sbf-8h-dCb"/>
+                <constraint firstItem="HBd-my-nVF" firstAttribute="top" secondItem="Xcm-v5-vgC" secondAttribute="bottom" constant="8" id="uJ9-0T-3Ve"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -10,7 +10,7 @@ import Foundation
 
 class DailySpecialsController {
     // NATHAN:  Kinda a lot going on here. Maybe mark or comment to separate this code out
-    static let mondayBreakfast = DailySpecials(name: "The Don Jose Breakfast Burrito.", description: "Two eggs scrambled with chorizo sausage, onion, green pepper, and tomato. Topped with tomatillo salsa and crumbled Queso Fresco, and served with Park Potatoes.")
+    static let mondayBreakfast = DailySpecials(name: "Don Jose Breakfast Burrito", description: "Two eggs scrambled with chorizo sausage, onion, green pepper, and tomato. Topped with tomatillo salsa and crumbled Queso Fresco, and served with Park Potatoes.")
     static let mondayLunch = DailySpecials(name: "The Darth Burger.", description: "Topped with bacon, grilled onion, and an evilly delicious chipotle mayo. Served with Park Potatoes and a cup of chicken noodle soup.")
     
     static let mondaySpecials = [mondayBreakfast,mondayLunch]
@@ -20,7 +20,7 @@ class DailySpecialsController {
     
     static let tuesdaySpecials = [tuesdayBreakfast,tuesdayLunch]
     
-    static let wednesdayBreakfast = DailySpecials(name: " Country Fried Steak and Eggs", description: "Smothered with sausage gravy, served with two eggs, Park Potatoes and toast.")
+    static let wednesdayBreakfast = DailySpecials(name: "Country Fried Steak and Eggs", description: "Smothered with sausage gravy, served with two eggs, Park Potatoes and toast.")
     static let wednesdayLunch = DailySpecials(name: "Kid Buu's BBQ Bacon Chicken Sandwich", description: "Topped with BBQ sauce, cheddar cheese, bacon and crispy onion straws. Served with Park Potatoes and a cup of beef barley soup.")
     
     static let wednesdaySpecials = [wednesdayBreakfast,wednesdayLunch]
