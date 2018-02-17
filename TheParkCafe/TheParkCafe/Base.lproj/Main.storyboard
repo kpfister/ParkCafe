@@ -29,15 +29,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="appMenuCell" rowHeight="60" id="GGC-Q8-U7Y" customClass="AppMenuTableViewCell" customModule="The_Park_Cafe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="appMenuCell" id="GGC-Q8-U7Y" customClass="AppMenuTableViewCell" customModule="The_Park_Cafe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GGC-Q8-U7Y" id="ZOL-FD-IqI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIJ-aL-xS3">
-                                                    <rect key="frame" x="15" y="19" width="69.5" height="24.5"/>
+                                                    <rect key="frame" x="8" y="11" width="69.5" height="24.5"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="0.50343893788343563" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="fIJ-aL-xS3" firstAttribute="leading" secondItem="ZOL-FD-IqI" secondAttribute="leadingMargin" id="5YF-0j-knh"/>
-                                                <constraint firstItem="fIJ-aL-xS3" firstAttribute="top" secondItem="ZOL-FD-IqI" secondAttribute="topMargin" constant="8" id="xdK-UW-t6p"/>
+                                                <constraint firstItem="fIJ-aL-xS3" firstAttribute="leading" secondItem="ZOL-FD-IqI" secondAttribute="leading" constant="8" id="5YF-0j-knh"/>
+                                                <constraint firstItem="fIJ-aL-xS3" firstAttribute="top" secondItem="ZOL-FD-IqI" secondAttribute="topMargin" id="xdK-UW-t6p"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

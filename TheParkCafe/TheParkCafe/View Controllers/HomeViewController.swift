@@ -16,13 +16,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     @IBOutlet weak var mainMenuTableView: UITableView!
     @IBOutlet weak var dailySpecialsTitleLabel: UILabel!
     
-    
-    // MockData for testing
-//    let mondaySpecial = ["title":"Don Jose Burrito","image":"donJose","description":"This burrito is so good!" ]
-//    let tuesdaySpecial = ["title":"Tuesday thing", "image":"eggsBenny","description":"Tuesday is so great"]
-    //let wednesdaySpecial = ["title":"Wednesday thing","image":"rancheros","description":"say what wednessday!"]
-    
-    //var daysArray = [Dictionary<String,String>]()
+    // Mark: Properties
     var menuItemsArray: [MenuItems] = []
     var dailySpecialsArray: [DailySpecials] = []
     var dayTitle: String = ""
@@ -30,9 +24,18 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
     // Mark: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let image = UIImage(named: "ParkCafeLogo")
-//        navigationItem.titleView = UIImageView(image: image)
+        dailySpecialsScrollView.delegate = self
         
+        dailySpecialsArray = DailySpecialsController.special(day: "Monday")
+    
+        setupDailySpecialsScrollView()
+        setupDate()
+        loadSpecials()
+        designBlurView()
+        designNavBar()
+    }
+    
+    func designBlurView() {
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         let backgroundImageView = UIImageView(image: UIImage(named: "outsideEmpty"))
@@ -40,59 +43,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         backgroundImageView.contentMode = .scaleAspectFit
         blurView.frame = backgroundImageView.bounds
         backgroundImageView.addSubview(blurView)
-        //backgroundImageView.alpha = 0.9
-       mainMenuTableView.backgroundView = backgroundImageView
-        
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE"
-        let dayz = formatter.string(from: date)
-        dayTitle = dayz
-        dailySpecialsArray = DailySpecialsController.special(day: "Monday")
-        
-
-        //daysArray = [mondaySpecial,tuesdaySpecial]
-        dailySpecialsScrollView.isPagingEnabled = true
-        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(dailySpecialsArray.count), height: 180)
-        dailySpecialsPageControl.numberOfPages = dailySpecialsArray.count
-        dailySpecialsScrollView.showsHorizontalScrollIndicator = false
-        dailySpecialsScrollView.delegate = self
-        loadSpecials()
-        designNavBar()
+        mainMenuTableView.backgroundView = backgroundImageView
     }
-    
-    func loadSpecials() {
-//        let date = Date()
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "EEEE"
-//        let dayz = formatter.string(from: date)
-//       let dayArray = DailySpecialsController.special(day: dayz)
-        
-    
-        for (index, day) in dailySpecialsArray.enumerated() {
-            
-            if let dailySpecialView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
-                //let idk = day
-                //dailySpecialView.dailySpecialsImageView.image = UIImage(named: day["image"]!)
-                //dailySpecialView.dailySpecialsDescriptionLabel.text = day["description"]
-                
-                dailySpecialView.dailySpecialsDescriptionLabel.text? = day.description!
-                dailySpecialView.dailySpecialsTitleLabel.text? = day.name
-                
-                dailySpecialView.frame = dailySpecialsScrollView.frame
-                dailySpecialView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
-                dailySpecialsScrollView.addSubview(dailySpecialView)
-            
-            }
-            dailySpecialsTitleLabel.text = "\(dayTitle)'s Specials"
-        }
-    }
-    /*
-     (lldb) po DailySpecialsManager.special(day: day)
-     ▿ 2 elements
-     - .0 : "Eggs Benedict"
-     - .1 : "BFB (Big Fucking Burrito"
-     */
     func designNavBar() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         imageView.contentMode = .scaleAspectFit
@@ -101,8 +53,38 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         navigationItem.titleView = imageView
     }
     
+    func setupDailySpecialsScrollView() {
+        dailySpecialsScrollView.isPagingEnabled = true
+        dailySpecialsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(dailySpecialsArray.count), height: 180)
+        dailySpecialsPageControl.numberOfPages = dailySpecialsArray.count
+        dailySpecialsScrollView.showsHorizontalScrollIndicator = false
+        dailySpecialsScrollView.delegate = self
+    }
     
-      //TODO: - Create the detail view and seque to it.
+    func setupDate() {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        let dayz = formatter.string(from: date)
+        dayTitle = dayz
+    }
+    
+    func loadSpecials() {
+        for (index, day) in dailySpecialsArray.enumerated() {
+            
+            if let dailySpecialView = Bundle.main.loadNibNamed("DailySpeacialsView", owner: self, options: nil)?.first as? DailySpecialsView {
+            
+                dailySpecialView.dailySpecialsDescriptionLabel.text? = day.description!
+                dailySpecialView.dailySpecialsTitleLabel.text? = day.name
+                dailySpecialView.frame = dailySpecialsScrollView.frame
+                dailySpecialView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
+                dailySpecialsScrollView.addSubview(dailySpecialView)
+            
+            }
+            dailySpecialsTitleLabel.text = "\(dayTitle)'s Specials"
+        }
+    }
+
      //MARK: - Navigation
      //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -131,6 +113,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate, UITableViewDel
         cell.appMenuCellLabel.text = sectionName
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / CGFloat(MenuController.appMenu.count)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
